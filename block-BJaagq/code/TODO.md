@@ -82,3 +82,4 @@ console.log(one, two, three, four); // one,two,three,four
 
 - Create the execution context diagram
 - What will be the value of 1, 2, 3, 4 and 5 or error if the code does not work
+//why are the additions not done!!
