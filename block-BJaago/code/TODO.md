@@ -43,7 +43,7 @@ sayHi();
 
 <!-- Put your image below -->
 
-![](./img/image-name.jpg)
+![](./images)
 
 3.
 
@@ -74,3 +74,4 @@ function double(num) {
   return num * 2;
 }
 ```
+//answers in the secs
