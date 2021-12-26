@@ -19,16 +19,15 @@ The above code will throw an error `Reference Error username is not defined`.
 {
   const username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // same as above because{} is an object and therefore it is not defines in the global space
 ```
-
 3. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
 
 ```js
 if (true) {
   let username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // same error as above
 ```
 
 4. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -37,7 +36,7 @@ console.log(useranme); // output
 if (true) {
   var username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // will showe error
 ```
 
 5. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -47,7 +46,7 @@ let username = 'John';
 if (true) {
   var username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // erroe showing username has already been delcared;
 ```
 
 6. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -57,7 +56,7 @@ let username = 'John';
 if (true) {
   let username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // username not defined
 ```
 
 7. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -68,7 +67,7 @@ function sayHello() {
   let username = 'Arya';
 }
 sayHello();
-console.log(useranme); // output
+console.log(useranme); // error
 ```
 
 8. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
