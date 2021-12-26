@@ -1,7 +1,7 @@
 Find the output of the code snippets below:
 
 ```js
-console.log(numA + numB); //OUTPUT
+console.log(numA + numB); //undefined
 var numA = 21,
   numB = 30;
 ```
@@ -9,7 +9,7 @@ var numA = 21,
 Find the output of the code snippets below:
 
 ```js
-console.log(numA + numB); //OUTPUT
+console.log(numA + numB); //error
 let numA = 21,
   numB = 30;
 ```
@@ -19,13 +19,13 @@ Find the output of the code snippets below:
 ```js
 let numA = 21,
   numB = 30;
-console.log(numA + numB); //OUTPUT
+console.log(numA + numB); //51
 ```
 
 Find the output of the code snippets below:
 
 ```js
-console.log(sayHello()); // OUTPUT
+console.log(sayHello()); // "hello"
 function sayHello() {
   console.log("Hey");
 }
@@ -38,7 +38,17 @@ Find the output of the code snippets below:
 
 ```js
 let username = "Tyrion";
-sayHello(); // OUTPUT
+sayHello();
+function sayHello() {
+  console.log(username);//Tyrion
+}
+```
+
+Find the output of the code snippets below:
+
+```js
+sayHello(); //error
+let username = "Tyrion";
 function sayHello() {
   console.log(username);
 }
@@ -47,18 +57,8 @@ function sayHello() {
 Find the output of the code snippets below:
 
 ```js
-sayHello(); // OUTPUT
 let username = "Tyrion";
-function sayHello() {
-  console.log(username);
-}
-```
-
-Find the output of the code snippets below:
-
-```js
-let username = "Tyrion";
-sayHello(); // OUTPUT
+sayHello(); // not a function
 let sayHello = () => {
   console.log(username);
 };
@@ -67,7 +67,7 @@ let sayHello = () => {
 Find the output of the code snippets below:
 
 ```js
-sayHello(); // OUTPUT
+sayHello(); // erroe
 let username = "Tyrion";
 let sayHello = () => {
   console.log(username);
@@ -77,7 +77,7 @@ let sayHello = () => {
 Find the output of the code snippets below:
 
 ```js
-sayHello(); // OUTPUT
+sayHello(); // error
 var username = "Tyrion";
 let sayHello = () => {
   console.log(username);
@@ -88,7 +88,7 @@ Find the output of the code snippets below:
 
 ```js
 var username = "Tyrion";
-sayHello(); // OUTPUT
+sayHello(); // error
 let sayHello = () => {
   console.log(username);
 };
@@ -102,7 +102,7 @@ let sayHello = () => {
   console.log(username);
   var username = "John";
 };
-sayHello(); // OUTPUT
+sayHello(); //undefined 
 ```
 
 Find the output of the code snippets below:
@@ -113,7 +113,7 @@ let sayHello = () => {
   var username = "John";
   console.log(username);
 };
-sayHello(); // OUTPUT
+sayHello(); // undefined
 ```
 
 Find the output of the code snippets below:
@@ -124,5 +124,5 @@ let sayHello = () => {
   console.log(username);
   let username = "John";
 };
-sayHello(); // OUTPUT
+sayHello(); //error
 ```
