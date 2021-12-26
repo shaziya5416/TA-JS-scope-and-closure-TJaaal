@@ -14,7 +14,7 @@ function change() {
 
 console.log(species); // human
 change();
-console.log(species); // vampires
+console.log(species); // human because it is declared here globally and when it bubbles out to the value it will go out to human only
 ```
 
 <!-- Put your image below -->
@@ -73,7 +73,7 @@ function main() {
 }
 
 main();
-console.log(one, two, three, four); // one,two,three,four
+console.log(one, two, three, four); //four is not defined
 ```
 
 <!-- Put your image below -->
