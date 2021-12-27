@@ -1,7 +1,16 @@
 1. Create a function by your choice that accepts a callback function.
-
+  //
+  
+  let multiplyByTwo=[1,2,3,4,5,6];
+  let answer=multiplyByTwo.map((elm)=>elm*2);
 2. Create a function by you choice that returns a function reference.
-
+   function addby2(n,cb){
+     return cb(n);
+   }
+   function two(a){
+     return a+2;
+   }
+   addby2(2,two)
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
    - A 'callback' function - a function that is applied to each element of the array (inside of the function 'map')
@@ -10,7 +19,13 @@ Have `map` return a new array filled with values that are the result of the 'cal
 
 ```js
 // Your code goes here
-
+function map(arr,cb){
+  let final=[];
+  for (let elm of arr){
+    final.push(cb(elm));
+  }
+  return final;
+}
 // Test Your Code
 function multiplyByTwo(n) {
   return n * 2;
@@ -33,11 +48,23 @@ forEach(letters, function (char) {
 });
 console.log(alphabet); //prints 'abcd'
 ```
-
+function forEach(arr,cb){
+  let final=[];
+  for (let elm of arr){
+    final.push(cb(elm));
+  }
+}
 5. Create higher-order function called `filter` takes an array and a callback, and runs the callback on each element of the array if the return value of callback is `truthy` store in new array return the new array.
 
 ```js
-// Test Your Code
+ 
+function filter(arr,cb){
+  let final=[];
+  for (let elm of arr){
+    
+  }
+  return final;
+}
 
 var numbers = [1, 3, 5, 4, 7, 89, 234, 20];
 let even = filter(numbers, function (n) {
