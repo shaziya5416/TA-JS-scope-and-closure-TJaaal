@@ -61,7 +61,9 @@ function forEach(arr,cb){
 function filter(arr,cb){
   let final=[];
   for (let elm of arr){
-    
+   if (cb(elm)){
+   final.push(elm);
+   }    
   }
   return final;
 }
