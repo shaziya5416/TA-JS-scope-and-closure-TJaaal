@@ -50,6 +50,7 @@ console.log(
 4. Write a higher order function that accepts a string and a operation function (callback function). Call the callback function passing the string as argument and return the returned value.
 
 ```js
+
 function operation(str, opFn) {
   return opFn(str);
 }
