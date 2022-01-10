@@ -64,8 +64,20 @@ var nextMessage = sayHello('Test');
 <!-- Answer -->
 
 ```js
-// Your code goes here
-```
+// declaration phase
+var username = undefined;
+let number;
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+let messsage;
+var nextMessage=undefined; 
+
+//execution phase
+
+console.log(username, numbers);
+var username = 'Arya';
+let number = 21;
 
 3.
 
