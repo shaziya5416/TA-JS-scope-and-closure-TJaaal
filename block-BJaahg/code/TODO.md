@@ -10,9 +10,9 @@ const lastName = 'Stark';
 var knownAs = 'no one';
 
 console.log(
-  window.firstName,
-  window.lastName,
-  window.knownAs
+  window.firstName,//undefined
+  window.lastName,//undefined
+  window.knownAs//no one
 );
 ```
 
@@ -27,7 +27,7 @@ function fullName(a, b) {
   return a + b;
 }
 
-console.log(window.fullName(firstName, lastName));
+console.log(window.fullName(firstName, lastName));//NaN
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
@@ -96,6 +96,7 @@ function isAwesome() {
   console.log(awesome);
 }
 isAwesome();
+//undefined
 ```
 
 9. What will be the output of the following
@@ -108,9 +109,8 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
-```
-
+isAwesome();//true
+```undefined
 10. What will be the output of the following
 
 ```js
@@ -122,6 +122,7 @@ function isAwesome() {
   console.log(awesome);
 }
 isAwesome();
+undefined
 ```
 
 11. What will be the output of the following
@@ -135,7 +136,7 @@ function fullName(a, b) {
   return a + b;
 }
 const name = fullName(firstName, lastName);
-console.log(name);
+console.log(name);//Arya Stark
 ```
 
 12. Guess the output of the code below with a reason.
@@ -146,7 +147,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log(name);
+console.log(name);//reference error should be there?
 ```
 
 13. Guess the output of the code below with a reason.
@@ -155,7 +156,7 @@ console.log(name);
 if (true) {
   var name = 'Arya Stark';
 }
-console.log(name);
+console.log(name);//Arya Stark
 ```
 
 14. Guess the output of the code below with a reason.
@@ -164,7 +165,7 @@ console.log(name);
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name);
+console.log(name);//undefined
 ```
 
 15. Guess the output of the code below with a reason.
@@ -173,7 +174,7 @@ console.log(name);
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i);//20
 ```
 
 16. Guess the output of the code below with a reason.
@@ -183,7 +184,7 @@ for (let i = 0; i < 20; i++) {
   //
 }
 console.log(i);
-```
+```//error
 
 17. Guess the output and the reason behind that.
 
@@ -192,9 +193,10 @@ function sample() {
   if (true) {
     var username = 'John Snow';
   }
-  console.log(username);
+  console.log(username);//john snow
 }
-sample();
+sample();//undefined because nothing is returned
+//
 ```
 
 18. Guess the output and the reason behind that.
@@ -204,7 +206,7 @@ function sample() {
   if (true) {
     let username = 'John Snow';
   }
-  console.log(username);
+  console.log(username);//error
 }
 sample();
 ```
@@ -216,9 +218,9 @@ function sample() {
   var username = 'Arya Stark';
   if (true) {
     var username = 'John Snow';
-    console.log(username);
+    console.log(username);//JOhn Snow
   }
-  console.log(username, 'second');
+  console.log(username, 'second');//JOhn Snow second
 }
 sample();
 ```
@@ -230,9 +232,9 @@ function sample() {
   let username = 'Arya Stark';
   if (true) {
     let username = 'John Snow';
-    console.log(username, 'first');
+    console.log(username, 'first');//John Snow First
   }
-  console.log(username, 'second');
+  console.log(username, 'second');//Arya Stark second
 }
 sample();
 ```
@@ -274,7 +276,7 @@ if (true) {
   let username = 'Hello World!';
   myFunc();
 }
-```
+//refernece error```
 
 24. Guess the output and the reason behind that.
 
@@ -289,7 +291,7 @@ function outer() {
   inner();
 }
 
-outer();
+outer();//I love this movie called MAD MAX: FURY ROAD
 ```
 
 25. Guess the output and the reason behind that.
@@ -299,14 +301,14 @@ function outer() {
   let movie = 'Mad Max: Fury Road';
   function inner() {
     let movie = 'Before Sunrise';
-    console.log(
-      `I love this movie called ${movie.toUpperCase()}`
+    console.l(
+      `I love this movie called ${movie.toUpperCase()}`//I love this movie called BEFORE SUNRISE
     );
   }
   inner();
 }
 
-outer();
+outer();//undefined
 ```
 
 26. Guess the output and the reason behind that.
@@ -319,7 +321,7 @@ function outer() {
     function extraInner() {
       let movie = 'Gone Girl';
       console.log(
-        `I love this movie called ${movie.toUpperCase()}`
+        `I love this movie called ${movie.toUpperCase()}`//I love this movie called GONE GIRL
       );
     }
     extraInner();
@@ -329,7 +331,7 @@ function outer() {
 outer();
 ```
 
-30. Using reduce find the final value when the initial value passed is `100`. You have to pass the output of one function into the input of next function in the array `allFunctions` starts with `addOne` ends with `half`.
+30. Using reduce find the final value when the initial value passed is `100`. You have to pass the output of one function into the input of next function in the array `allFunctons` starts with `addOne` ends with `half`.
 
 ```js
 const addOne = (num) => {
